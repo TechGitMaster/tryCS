@@ -1,0 +1,26 @@
+<div class="header">
+    <div class="admiND">
+        <div class="dHB">
+            <p class="pAdmin">Welcome Admin</p>
+            <p style="text-align: center;">Admin allows them to control the forum/website/etc. The admin changed the forum settings to make more users happier. Etymology: Shortening of 
+                administrator or administration. admin noun. A person who controls specific network.</p>
+        </div>
+
+
+        <div class="usersD">
+            <p class="pDSA">Dashboard</p>
+            <div *ngIf="datas$ | async as datas; else loading">
+                <div class="dsag" *ngFor="let frag of datas.data">
+                    <div style="padding:20px;">
+                        <p style="padding:0px;margin:0px;margin-bottom:10px;">Name: {{ frag.name }}</p>
+                        <p style="padding:0px;margin:0px;">Phone: {{ frag.phone }}</p>
+                        <button class="bttn" (click)="CheckingGo(frag.id)">Check</button>
+                    </div>
+                </div>
+            </div>
+           <ng-template #loading>
+               Loading...
+           </ng-template>
+        </div>
+    </div>
+</div>

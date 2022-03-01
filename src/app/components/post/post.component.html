@@ -1,0 +1,16 @@
+<div class="hPost">
+    <div class="HPostS">
+        <p>Post of User</p>
+    </div>
+
+    <div *ngIf="arrObsevable | async as data; else loading">
+        <div class="diVpOs" *ngFor="let datas of data">
+            <p style="padding:0px;margin:0px;padding-top:15px;padding-bottom:10px;">Title: {{ datas.title }}</p>
+            <span>{{ datas.body }}</span>
+        </div>
+    </div>
+
+    <ng-template #loading>
+        <p class="loadingA">Loading Post...</p>
+    </ng-template>
+</div>

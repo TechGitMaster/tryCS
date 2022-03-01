@@ -1,0 +1,17 @@
+<div class="divHI">
+    <div class="infoDi">
+        <p class="pIn">Information</p>
+    </div>
+
+
+    <div *ngIf="objects | async as arr; else loading">
+        <div *ngFor="let ss of arr" class="divINS">
+            <p >{{ ss[0] }}: {{ ss[1] }}</p>
+        </div>
+    </div>
+
+    <ng-template #loading>
+        <p class="loading">Loading information...</p>
+    </ng-template>
+
+</div>

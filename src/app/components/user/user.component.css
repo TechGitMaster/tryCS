@@ -1,0 +1,47 @@
+.container-fluid{
+    padding-left:20%;
+    padding-right:20%;
+}
+
+.p1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:25px;
+    color:rgb(27, 27, 73);
+    font-weight: 600;
+    padding:0px;
+    margin: 0px;
+    margin-top:20px;
+    margin-bottom:40px;
+}
+
+.body{
+    display:flex;
+}
+
+.v1{
+    width:20%;
+    margin-right:2%;
+    padding:10px;
+}
+
+.v2{
+    width:78%;
+    min-height:300px;
+}
+
+.btnD{
+    margin-bottom:10px;
+}
+
+.btn{
+    border:none;
+    border-radius:15px;
+    font-size:16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(93, 73, 204, 0.795);
+    color:white;
+    padding:15px;
+    cursor:pointer;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.342);
+}
