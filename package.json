@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npm-run-all -p client server",
+    "start": "node server.js",
     "client": "ng serve --proxy-config proxy.config.json --live-reload false",
     "server": "supervisor server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "heroku-postbuild": "ng build — prod"
   },
   "private": true,
   "dependencies": {
@@ -27,7 +28,11 @@
     "rxjs": "~6.6.0",
     "socket.io-client": "^4.4.1",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+
+    "@angular/cli": "~12.2.11",
+    "@angular/compiler-cli": "~12.2.0",
+    "typescript": "~4.3.5"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.2.11",
@@ -42,5 +47,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.3.5"
-  }
+  },
+
+  "engines": { "node": "16.14.0", "npm": "8.3.1" }
 }
