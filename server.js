@@ -47,4 +47,4 @@ livedata.on('connect', (socket) => {
     socket.emit('message', 'CONNNNSAKJDHSAKJDH');
 });
 
-server.listen((process.env.POST || 8080), () => console.log('--Connection is successful--'));
+server.listen((process.env.PORT || 8080), () => console.log('--Connection is successful--'));
