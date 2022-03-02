@@ -33,7 +33,7 @@ app.use('/', require('./servFile/expSe.js'));
 
 
 app.use(express.static('./dist/tryCon'));
-app.get('*', (req, res) =>
+app.get('/*', (req, res) =>
     res.sendFile('index.html', {root: 'dist/tryCon/'}),
 );
 
